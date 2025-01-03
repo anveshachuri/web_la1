@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvesha Churi - Portfolio</title>
+<style>
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+header {
+  background-color: #810b5e;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+h2 {
+  color: #8b1236;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skill {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.skill h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.skill p {
+  font-size: 0.9em;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.project:hover {
+  transform: scale(1.05);
+}
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.project-details {
+  padding: 20px;
+}
+.project-details h3 {
+  margin: 0;
+  color: #8b1236;
+  font-size: 1.4em;
+}
+.project-details .tech-stack {
+  margin: 10px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+.project-details .description {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.project-links a {
+  display: inline-block;
+  padding: 8px 15px;
+  color: white;
+  background: #810b5e;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+.project-links a:hover {
+  background: #a12c6e;
+}
+.project-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-top: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact-card {
+  text-align: center;
+  width: 30%;
+  min-width: 200px;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.contact-card:hover {
+  transform: scale(1.05);
+}
+.contact-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.contact-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.contact-card p {
+  margin: 5px 0;
+}
+.contact-card a {
+  text-decoration: none;
+  color: #810b5e;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #d5799f;
+  color: white;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
+.contact {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .contact-card {
+      text-align: center;
+      width: 30%;
+      min-width: 200px;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .contact-card:hover {
+      transform: scale(1.05);
+    }
+    .contact-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background-color: #810b5e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    button[type="submit"]:hover {
+      background-color: #a12c6e;
+    }
+</style>
+</head>
+<body>
+<header>
+  <h1>Anvesha Churi</h1>
+  <p>~ Portfolio ~</p>
+</header>
+<div class="container">
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+        I'm a third-year Computer Science student with a passion for combining technical expertise with creative solutions. My journey in technology began with a fascination for solving problems through programming, and since then, I've delved deep into areas like machine learning, AI, and web development.
+    </p>
+    <p>
+        Beyond coding, I find joy in artistic pursuits like painting, which fuels my creativity, and spending quality time with my dog, who ensures my life is full of energy and happiness. As a Harry Potter enthusiast, I enjoy exploring the magical world of Hogwarts, often drawing parallels between its themes and the challenges of our real world.
+    </p>
+    <p>
+        My goal is to build impactful projects that not only solve real-world problems but also inspire others to see the beauty in technology. I believe in continuous learning and strive to blend innovation with practicality in everything I create.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>Programming</h3>
+        <p>Python, C++, Java</p>
+      </div>
+      <div class="skill">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="skill">
+        <h3>Machine Learning</h3>
+        <p>Data Analysis, AI Algorithms</p>
+      </div>
+      <div class="skill">
+        <h3>Tools</h3>
+        <p>Git, SQL, TensorFlow</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="img1.png" alt="Credit Card Fraud Detection">
+        <div class="project-details">
+          <h3>Credit Card Fraud Detection</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> Python, TensorFlow, Scikit-learn, Pandas
+          </div>
+          <div class="description">
+            <p>An advanced machine learning system that identifies fraudulent credit card transactions with 99.4% accuracy. Features include:</p>
+            <ul>
+              <li>Real-time transaction monitoring</li>
+              <li>Anomaly detection using deep learning</li>
+              <li>Custom feature engineering pipeline</li>
+              <li>Interactive dashboard for fraud analysis</li>
+            </ul>
+          </div>
+          <div class="project-status">Deployed</div>
+          <div class="project-links">
+            <a href="https://github.com/anveshachuri/Credit-Card-Fraud-Detection-using-Machine-Learning" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img4.jpeg" alt="SkinSense">
+        <div class="project-details">
+          <h3>SkinSense</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> Python, PyTorch, OpenCV, Flask, React
+          </div>
+          <div class="description">
+            <p>A comprehensive skincare recommendation system that combines computer vision and personalized analytics. Key features:</p>
+            <ul>
+              <li>Skin condition analysis using deep learning</li>
+              <li>Personalized product recommendations</li>
+              <li>Ingredient sensitivity tracking</li>
+              <li>Progress monitoring with image comparison</li>
+            </ul>
+          </div>
+          <div class="project-status">Beta Testing</div>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Documentation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img2.jpeg" alt="Weather Forecasting App">
+        <div class="project-details">
+          <h3>Weather Forecasting App</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> React, Node.js, Express, OpenWeather API
+          </div>
+          <div class="description">
+            <p>A modern weather application with advanced features and elegant UI:</p>
+            <ul>
+              <li>7-day detailed forecasts</li>
+              <li>Real-time weather alerts</li>
+              <li>Location-based suggestions</li>
+              <li>Historical weather data analysis</li>
+            </ul>
+          </div>
+          <div class="project-status">Live</div>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live Site</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img3.jpeg" alt="Painting Recognition">
+        <div class="project-details">
+          <h3>Painting Recognition</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> Python, TensorFlow, ResNet50, Flask
+          </div>
+          <div class="description">
+            <p>An AI-powered system for analyzing and classifying painting styles:</p>
+            <ul>
+              <li>Recognition of 20+ artistic styles</li>
+              <li>Artist attribution system</li>
+              <li>Period classification</li>
+              <li>Style transfer capabilities</li>
+            </ul>
+          </div>
+          <div class="project-status">In Development</div>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Research Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img5.jpeg" alt="EcoTrack">
+        <div class="project-details">
+          <h3>EcoTrack</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> React Native, Firebase, Node.js, MongoDB
+          </div>
+          <div class="description">
+            <p>A mobile app for tracking personal carbon footprint:</p>
+            <ul>
+              <li>Daily activity carbon calculator</li>
+              <li>Sustainable lifestyle recommendations</li>
+              <li>Community challenges and rewards</li>
+              <li>Integration with smart home devices</li>
+            </ul>
+          </div>
+          <div class="project-status">Alpha Testing</div>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Prototype</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img6.jpeg" alt="StudyBuddy">
+        <div class="project-details">
+          <h3>StudyBuddy</h3>
+          <div class="tech-stack">
+            <strong>Tech Stack:</strong> Django, PostgreSQL, Redis, WebSocket
+          </div>
+          <div class="description">
+            <p>A collaborative learning platform for students:</p>
+            <ul>
+              <li>Real-time group study sessions</li>
+              <li>Resource sharing system</li>
+              <li>Intelligent study schedule optimizer</li>
+              <li>Progress tracking analytics</li>
+            </ul>
+          </div>
+          <div class="project-status">In Progress</div>
+          <div class="project-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Documentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <div class="contact-card">
+        <img src="email-icon.png" alt="Email Icon">
+        <h3>Email</h3>
+        <p>anvesha.churi01@gmail.com</p>
+      </div>
+      <div class="contact-card">
+        <img src="phone-icon.png" alt="Phone Icon">
+        <h3>Phone</h3>
+        <p>+91 9370221449</p>
+      </div>
+      <div class="contact-card">
+        <img src="linkedin-icon.png" alt="LinkedIn Icon">
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/anveshachuri" target="_blank">linkedin.com/in/anveshachuri</a></p>
+      </div>
+      <div class="contact-card">
+        <img src="github-icon.png" alt="GitHub Icon">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/anveshachuri" target="_blank">github.com/anveshachuri</a></p>
+      </div>
+    </div>
+
+    <form class="contact-form" action="/submit" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</div>
+<footer>
+  <p>© 2025 Anvesha Churi. All rights reserved.</p>
+</footer>
+</body>
+</html>
